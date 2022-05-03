@@ -1,5 +1,6 @@
 require_relative 'spec_helper'
 
+
 describe Student do
   before :each do
     DB[:conn].execute("DROP TABLE IF EXISTS students")
@@ -32,11 +33,11 @@ describe Student do
     end
   end
 
-  describe '.table_name' do
-    it 'creates a downcased, plural table name based on the Class name' do
-      expect(Student.table_name).to eq('students')
-    end
-  end
+  # describe '.table_name' do
+  #   it 'creates a downcased, plural table name based on the Class name' do
+  #     expect(Student.table_name).to eq('students')
+  #   end
+  # end
 
   describe '.column_names' do
     it 'returns an array of SQL column names' do
